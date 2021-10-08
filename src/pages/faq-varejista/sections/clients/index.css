@@ -1,0 +1,63 @@
+#faq-retailer-page {
+    & .section-faq {
+        @apply w-full;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 120px;
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-top: 100px;
+        @media (max-width: 834px) {
+            margin-top: 64px;
+        }
+        & .container {
+            max-width: 1344px;
+            padding-left: calc(100% / 12);
+            @media (max-width: 834px) {
+                padding-left: 0;
+            }
+            & .title {
+                margin-bottom: 50px;
+                @media (max-width: 834px) {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+    & .react-tabs {
+        margin-top: 60px;
+        & .react-tabs__tab-list {
+            @apply flex;
+            justify-content: center;
+            align-items: center;
+            & .react-tabs__tab {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-grow: 1;
+                height: 64px;
+                @apply bg-custom-gray;
+                & .title {
+                    font-weight: 700;
+                }
+            }
+            & .react-tabs__tab--selected {
+                @apply bg-white;
+                height: 68px;
+                border-radius: 8px 8px 0px 0px;
+                border-top: solid 4px;
+                @apply border-custom-green;
+            }
+        }
+    }
+    & .contato {
+        @apply w-full flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 144px;
+        @media (max-width: 834px) {
+            margin-bottom: 80px;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+#hero-retailer {
+    @apply bg-custom-gray-lighter flex relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-image: url('../../../../../public/images/grafism/hero-retailer-desktop-bottom.png'), url('../../../../../public/images/grafism/hero-retailer-desktop-top.png');
+    background-repeat: no-repeat;
+    background-position: right bottom, left top;
+    
+    @media (max-width: 834px) {
+        background-image: url('../../../../../public/images/grafism/hero-retailer-mobile.png'), url('../../../../../public/images/grafism/hero-retailer-mobile.png');
+        background-position: 0px calc(80% - 180px), 0px 80%;
+        background-size: contain;
+    }
+    & .hero-grid {
+        @apply grid-cols-12 w-full;
+        z-index: 2;
+        display: grid;
+        margin-top: 82px;
+        max-width: 1344px;
+        padding-left: 24px;
+        padding-right: 24px;
+        @media (max-width: 834px) {
+            margin-top: 82px;
+        }
+        & .content {
+            @apply col-span-4 flex h-full;
+            justify-content: center;
+            flex-direction: column;
+            @media (max-width: 834px) {
+                @apply col-span-12;
+            }
+            & .call {
+                margin-bottom: 24px;
+                @media (max-width: 834px) {
+                    display: flex;
+                    align-content: flex-end;
+                    padding-top: 54px;
+                    margin-bottom: 8px;
+                    text-align: center;
+                }
+            }
+            & .excerpt {
+                margin-bottom: 36px;
+                @media (max-width: 834px) {
+                    text-align: center;
+                }
+            }
+            & .button-container {
+                @media (max-width: 834px) {
+                    text-align: center;
+                    height: 50%;
+                    flex-grow: 1;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+                    padding-bottom: 46px;
+                } 
+            }
+        }
+    }
+    & .hero-image {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        &.desktop {
+            right: 90px;
+            height: calc(100% - 82px);
+            margin-top: 82px;
+        }
+        &.mobile {
+            @media (max-width: 834px) {
+                height: 50%;
+                max-height: 50%;
+                right: auto;
+                left: auto;
+            }
+        }
+    }
+}

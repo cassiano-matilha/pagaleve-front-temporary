@@ -1,0 +1,68 @@
+#hero {
+    @apply bg-custom-gray-lighter h-screen flex relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-image: url('../../../../../public/images/grafism/hero-desktop.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    
+    @media (max-width: 834px) {
+        background-image: url('../../../../../public/images/grafism/hero-mobile.png');
+        background-size: cover;
+    }
+    & .hero-grid {
+        @apply grid-cols-12 w-full;
+        z-index: 2;
+        display: grid;
+        margin-top: 82px;
+        max-width: 1344px;
+        padding-left: 24px;
+        padding-right: 24px;
+        @media (max-width: 834px) {
+            margin-top: 0;
+        }
+        & .content {
+            @apply col-span-4 flex h-full;
+            justify-content: center;
+            flex-direction: column;
+            @media (max-width: 834px) {
+                @apply col-span-9;
+            }
+            & .call {
+                margin-bottom: 148px;
+                @media (max-width: 834px) {
+                    margin-bottom: 80px;
+                }
+            }
+            & .excerpt {
+                margin-bottom: 36px;
+                @media (max-width: 834px) {
+                    margin-bottom: 32px;
+                    padding-right: 64px;
+                }
+            }
+        }
+    }
+    & .hero-image {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        &.desktop {
+            right: 90px;
+            height: calc(100% - 82px);
+            margin-top: 82px;
+        }
+        &.mobile {
+            right: -130px;
+            height: 500px;
+            bottom: 0;
+            max-height: calc(100% - 80px);
+            @media (min-width: 0px) and (max-width: 767px) {
+                height: 430px;
+                right: -130px;
+            }
+        }
+    }
+}

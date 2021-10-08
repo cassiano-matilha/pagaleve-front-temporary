@@ -1,0 +1,80 @@
+#varejista {
+    @apply relative flex;
+    justify-content: center;
+    margin-bottom: 200px;
+    align-items: center;
+    @media (max-width: 834px) {
+        margin-bottom: 170px;
+    }
+    & .grid {
+        @apply grid-cols-12 w-full;
+        display: grid;
+        max-width: 1344px;
+        padding-left: 24px;
+        padding-right: 24px;
+        & .content {
+            @apply col-span-4 col-start-2 flex;
+            flex-direction: column;
+            justify-content: center;
+            @media (max-width: 834px) {
+                @apply col-span-12 col-start-1;
+            }
+            & .call {
+                margin-bottom: 12px;
+                @media (max-width: 834px) {
+                    margin-bottom: 16px;
+                }
+            }
+            & .description {
+                @media (max-width: 834px) {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+        & .image-container {
+            border: 2px solid;
+            @apply col-span-5 col-start-7 w-full flex border-custom-green relative;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            @media (max-width: 834px) {
+                @apply col-span-12 col-start-1;
+                margin-top: 64px;
+            }
+            &:after {
+                content: "";
+                display: block;
+                padding-bottom: 100%;
+            }
+            & .retailer-img {
+                width: calc(100% - 64px);
+                height: calc(100% - 64px);
+                object-fit: cover;
+                border-radius: 50%;
+            }
+            & .floating-icon {
+                position: absolute;
+                &.floating-money {
+                    bottom: 6%;
+                    left: 6%;
+                    animation: light-float 6s ease-in-out infinite;
+                }
+                &.floating-ticket {
+                    top: 0;
+                    left: 12%;
+                    animation: light-float 5s ease-in-out infinite;
+                }
+                &.floating-box {
+                    bottom: 0;
+                    right: 8%;
+                    animation: light-float 7s ease-in-out infinite;
+                }
+            }
+        }
+    }
+    & .grafism-bottom {
+        @apply absolute;
+        bottom: -100px;
+        left: 0px;
+    }
+}

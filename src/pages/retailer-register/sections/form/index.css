@@ -1,0 +1,95 @@
+#retailer-form {
+    @apply flex;
+    justify-content: center;
+    margin-top: 96px;
+    margin-bottom: 140px;
+    @media (max-width: 834px) {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    & .grid {
+        @apply grid-cols-12 w-full;
+        grid-auto-rows: minmax(min-content, max-content);
+        display: grid;
+        max-width: 1344px;
+        padding-left: 24px;
+        padding-right: 24px;
+        & .title {
+            @apply col-span-6 col-start-4;
+            margin-bottom: 32px;
+            @media (max-width: 834px) {
+                @apply col-span-12 col-start-1;
+                margin-top: 40px;
+                margin-bottom: 24px;
+                & h1 {
+                    text-align: center;
+                }
+            }
+        }
+        & .first-row {
+            @apply col-span-3 col-start-4;
+            @media (max-width: 834px) {
+                @apply col-span-12 col-start-1;
+            }
+        }
+        & .second-row {
+            @apply col-span-3 col-start-7;
+            @media (max-width: 834px) {
+                @apply col-span-12 col-start-1;
+            }
+        }
+        & .text-area {
+            @apply col-span-6 col-start-4;
+            width: calc(100% - 30px);
+            height: 150px;
+            margin-bottom: 36px;
+            @media (max-width: 834px) {
+                @apply col-span-12 col-start-1 w-full;
+                margin-bottom: 32px;
+            }
+        }
+        & .form-input {
+            width: calc(100% - 30px);
+            margin-bottom: 46px;
+            @media (max-width: 834px) {
+                @apply w-full;
+            }
+        }
+        & .button-container {
+            @apply col-span-6 col-start-4;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 30px;
+            @media (max-width: 834px) {
+                @apply col-span-12 col-start-1;
+                padding-right: 0px;
+            }
+        }
+    }
+    & .modal-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: 834px) {
+            padding: 0px 32px;
+        }
+        & .icon-message {
+            margin-top: 56px;
+            margin-bottom: 24px;
+        }
+        & .success {
+            text-align: center;
+            max-width: 320px;
+            margin-bottom: 32px;
+        }
+        & .message {
+            text-align: center;
+            max-width: 320px;
+            margin-bottom: 24px;
+        }
+        & .button-close {
+            margin-bottom: 48px;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+
+{
+    "data": [
+        {
+            "id": 1, 
+            "title": "Melhoria do fluxo de caixa",
+            "description": "Pagamento para o varejista em D+1 (útil) do total do valor da venda, descontado a nossa taxa de serviço. Todo o risco de crédito fica com a Pagaleve."
+        },
+        {
+            "id": 2, 
+            "title": "Atração de novos clientes",
+            "description": "Viabilização de parcelamento para pessoas que não teriam acesso - sem cartão de crédito e com análise instantânea."
+        },
+        {
+            "id": 3, 
+            "title": "Aumento do poder de compra dos consumidores",
+            "description": "Quase metade dos usuários de BNPL no exterior declaram gastar de 10% a 40% acima do que gastariam no cartão de crédito com o mesmo tipo de compra."
+        }
+    ]
+}

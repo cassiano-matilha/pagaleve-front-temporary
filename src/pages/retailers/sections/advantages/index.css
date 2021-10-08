@@ -1,0 +1,99 @@
+#advantages-retailer {
+    overflow-x: clip;
+    @apply relative;
+    & .content {
+        @apply w-full relative;
+        z-index: 2;
+        display: inline-block;
+        margin-top: 136px;
+        margin-bottom: 160px;
+        @media (max-width: 834px) {
+            margin-top: 72px;
+            margin-bottom: 64px;
+        }
+        & .excerpt {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            margin: auto;
+            margin-bottom: 80px;
+            @media (max-width: 834px) {
+                margin-bottom: 54px;
+                padding: 0px 24px;
+            }
+        }
+        & .cards-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media (max-width: 834px) {
+                flex-direction: column;
+                width: 100%;
+                display: -webkit-box;
+                overflow: scroll;
+            }
+            & > div:first-child {
+                margin-right: 54px;
+                @media (max-width: 834px) {
+                    margin-left: 24px;
+                    margin-right: 24px;
+                }
+            }
+            & > div:last-child {
+                margin-left: 54px;
+                @media (max-width: 834px) {
+                    margin-left: 24px;
+                    margin-right: 24px;
+                }
+            }
+            & .card {
+                flex-direction: column;
+                & .icon {
+                    @apply mx-auto;
+                    margin-bottom: 30px;
+                }
+                & .item {
+                    width: 100%;
+                    padding: 12px 24px;
+                    text-align: center;
+                }
+                & .description {
+                    text-align: center;
+                    width: 100%;
+                    padding: 0 36px;
+                    @media (max-width: 834px) {
+                        padding: 0 24px;
+                    }
+                }
+            }
+        }
+    }
+    & .grafism-top {
+        top: 70px;
+        right: -40px;
+    }
+    & .grafism-bottom {
+        bottom: 20px;
+        left: -40px;
+    }
+    & .grafism-first {
+        top: 20px;
+        left: -20px;
+        z-index: 1;
+    }
+    & .grafism-second {
+        top: 600px;
+        right: -20px;
+        z-index: 1;
+    }
+    & .grafism-third {
+        bottom: 450px;
+        left: -20px;
+        z-index: 1;
+    }
+    & .grafism-fourth {
+        bottom: 20px;
+        right: -20px;
+        z-index: 1;
+    }
+}

@@ -1,0 +1,39 @@
+.dropdown-input {
+    position: relative;
+    font-family: raleway;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    & .Dropdown-placeholder {
+        padding: 8px 0;
+        border-bottom: 2px solid #B4B4B4;
+        color: #B4B4B4;
+        &.is-selected {
+            color: #555555;
+        }
+    }
+    & .Dropdown-menu {
+        @apply bg-white absolute w-full;
+    }
+    & .Dropdown-option {
+        @apply w-full;
+        padding: 8px;
+        transition-property: all;
+        transition-duration: 300ms;
+        &:hover {
+            @apply bg-custom-gray;
+        }
+    }
+    & .is-open {
+        border-bottom: 2px solid #666666;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    &:after {
+        content: url('../../../public/icons/arrow-vertical.svg');
+        position: absolute;
+        top: 10px;
+        right: 0;
+    }
+}

@@ -1,0 +1,89 @@
+#footer {
+    & .footer-grid {
+        @apply grid w-full h-full grid-cols-12;
+
+        grid-auto-rows: minmax(min-content, max-content);
+        max-width: 1344px;
+        padding-left: 24px;
+        padding-right: 24px;
+
+        & .logo {
+            @apply col-span-1 w-full;
+            @media (max-width: 834px) {
+                @apply col-span-12;
+                margin-bottom: 12px;
+            }
+        }
+        & .call {
+            @apply col-span-4 col-start-2 w-full;
+            margin-bottom: 76px;
+            @media (max-width: 834px) {
+                @apply col-span-12 col-start-1;
+                text-align: center;
+            }
+        }
+        & a {
+            font-weight: 700;
+            margin-bottom: 16px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &:hover {
+                & p {
+                    transition: text-shadow 500ms;
+                    text-shadow: 0 0 2px #fff, 0 0 2px #fff;
+                }
+            }
+        }
+        & .items-first-column {
+            @apply col-span-3 col-start-2 flex;
+            flex-direction: column;
+            @media (max-width: 834px) {
+                @apply col-span-12 col-start-1;
+                align-items: center;
+                margin-bottom: 40px;
+            }
+        }
+        & .items-second-column {
+            @apply col-span-3 col-start-5 flex;
+            flex-direction: column;
+            @media (max-width: 834px) {
+                @apply col-span-12 col-start-1;
+                align-items: center;
+                margin-bottom: 40px;
+            }
+        }
+        & .contato {
+            @apply col-span-3 col-start-8 flex;
+            flex-direction: column;
+            & .title {
+                font-weight: 700;
+                margin-bottom: 16px;
+            }
+
+            @media (max-width: 834px) {
+                @apply col-span-12 col-start-1;
+                align-items: center;
+            }
+        }
+        & .cnpj {
+            @apply col-span-12 flex;
+            margin-top: 60px;
+            justify-content: center;
+            @media (max-width: 834px) {
+                align-items: center;
+                flex-direction: column;
+            }
+            & .code {
+                margin-right: 10px;
+                @media (max-width: 834px) {
+                    margin-right: 0;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+    & .heart {
+        margin-right: 10px;
+    }
+}

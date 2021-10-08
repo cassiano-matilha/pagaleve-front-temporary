@@ -1,0 +1,38 @@
+#hero-faq-retailer {
+    @apply bg-custom-gray-lighter flex relative;
+    overflow: hidden;
+    padding-top: 80px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    padding-left: 24px;
+    padding-right: 24px;
+    height: 480px;
+    @media (max-width: 834px) {
+        background: none;
+        height: 260px;
+        justify-content: flex-end;
+    }
+    & img {
+        position: absolute;
+        height: calc(100%);
+        top: 40px;
+    }
+    & .title {
+        @apply w-full;
+        text-align: center;
+        font-size: 56px;
+        @media (max-width: 834px) {
+            text-align: left;
+            font-size: 36px;
+        }
+    }
+    & .text {
+        max-width: 580px;
+        margin-top: 8px;
+        text-align: center;
+    }
+}

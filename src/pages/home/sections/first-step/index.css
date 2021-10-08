@@ -1,0 +1,62 @@
+#first-step {
+    overflow-x: clip;
+    @apply relative flex;
+    justify-content: center;
+    padding-top: 92px;
+    & .grid {
+        @apply grid-cols-12 w-full;
+        z-index: 2;
+        display: grid;
+        max-width: 1344px;
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-bottom: 160px;
+        @media (max-width: 834px) {
+            grid-auto-rows: minmax(min-content, max-content);
+            margin-bottom: 100px;
+            margin-top: 0px;
+        }
+        & .title {
+            @apply col-span-6 col-start-4;
+            text-align: center;
+            margin-bottom: 100px;
+            
+            @media (max-width: 834px) {
+                @apply col-span-12 col-start-1;
+                margin-bottom: 80px;
+            }
+        }
+        & .steps {
+            @apply col-span-6 col-start-2 flex;
+            align-items: center;
+            @media (max-width: 834px) {
+                @apply col-span-12 col-start-1 row-start-2;
+                margin-bottom: 100px;
+            }
+            & .list {
+                @apply flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                & li {
+                    width: 100%;
+                }
+            }
+        }
+        & .phone-mock {
+            @apply col-span-3 col-start-9;
+            @media (max-width: 834px) {
+                @apply col-span-12 col-start-1 mx-auto;
+                padding: 40px;
+            }
+        }
+    }
+    & .grafism-top {
+        top: 70px;
+        right: 90px;
+    }
+    & .grafism-bottom {
+        bottom: 40px;
+        left: 100px;
+    }
+}

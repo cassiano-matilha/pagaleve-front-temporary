@@ -1,0 +1,36 @@
+.dropdown {
+    & .Collapsible {
+        @apply w-full;
+    }
+    & .question-container {
+        & .arrow {
+            transform: scale(1);
+            transition: transform 300ms ease-in;
+
+            & .dropdown-arrow {
+                transform: rotate(0);
+                transition: transform 300ms ease-in;
+                &.rotated {
+                    transform: rotate(180deg);
+                    transition: transform 300ms ease-in;
+                }
+            }
+        }
+        &:hover {
+            cursor: pointer;
+            transition: text-shadow 300ms;
+            text-shadow: 0 0 .4px #333, 0 0 .4px #333;
+            & .arrow {
+                cursor: pointer;
+                transform: scale(1.1);
+                transition: transform 300ms ease-in;
+            }
+        }
+        & .question {
+            flex-grow: 1;
+            @media (max-width: 834px) {
+                margin-right: 24px;
+            }
+        }
+    }
+}

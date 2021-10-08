@@ -1,0 +1,49 @@
+#wrapper {
+	position: relative;
+	padding-bottom: 500px;
+	@media (max-width: 834px) {
+		padding-bottom: 780px;
+	}
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+.desktop {
+	@media (max-width: 834px) {
+		display: none !important;
+	}
+}
+.mobile {
+	@media (min-width: 834.9px) {
+		display: none !important;
+	}
+}
+.pink-text {
+	@apply text-custom-pink;
+}
+@keyframes float {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-50px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+
+@keyframes light-float {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-15px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
